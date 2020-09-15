@@ -1,12 +1,11 @@
-package com.hufei.technical.test;
+package com.hufei.technical.lambad;
 
+import com.hufei.technical.interfacePakage.FuncInterface;
 import com.hufei.util.JsonUtils;
 import com.hufei.util.MapUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -108,10 +107,6 @@ public class TestClass {
     private static void testLock() {
         ReentrantLock lock = new ReentrantLock();
         lock.lock();
-    }
-
-    private static void testThreadPool() {
-        ExecutorService service = Executors.newFixedThreadPool(5);  //创建线程池
     }
 
     private static void test01() {

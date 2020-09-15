@@ -1,4 +1,4 @@
-package com.hufei.technical.test;
+package com.hufei.technical.lambad;
 
 /**
  * @Author:hufei

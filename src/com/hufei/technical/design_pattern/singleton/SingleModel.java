@@ -3,7 +3,7 @@ package com.hufei.technical.design_pattern.singleton;
 /**
  * @Author:hufei
  * @CreateTime:2020-06-30
- * @Description:单例模式
+ * @Description:设计模式之单例模式
  */
 public class SingleModel {
 
