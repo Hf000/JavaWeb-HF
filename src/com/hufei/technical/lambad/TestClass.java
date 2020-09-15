@@ -1,13 +1,6 @@
 package com.hufei.technical.lambad;
 
 import com.hufei.technical.interfacePakage.FuncInterface;
-import com.hufei.util.JsonUtils;
-import com.hufei.util.MapUtils;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Author:hufei
@@ -16,27 +9,16 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class TestClass {
 
+    /*
+    * 抽取成方法的快捷键 ctrl+alt+m
+    * 查看类方法快捷键 alt+7 或者 ctrl+f12
+    * */
     public static void main(String[] args) {
-//        test01();
-//        test02();//抽取成方法的快捷键 ctrl+alt+m
-//        testThreadPool();
-//        testLock(); //查看类方法快捷键 alt+7 或者 ctrl+f12
-//        testAtomic();
-//        addTest01();
-//        addTest02();
-//        addTest03();
-//        Test test = new Test();
-//        test.method();
-        interfaceTest();
-    }
-
-    public static void interfaceTest() {
-        TestInterface test = () -> {
-            System.out.println("测试这里重写的是哪个方法");
-        };
-        test.method01();
-        test.method02();
-        test.method04();
+        addTest01();
+        addTest02();
+        addTest03();
+        Test test = new Test();
+        test.method();
     }
 
     @org.junit.Test
@@ -94,40 +76,6 @@ public class TestClass {
             a = a++;
         }
         System.out.println(a);
-    }
-
-    private static void testAtomic() {
-        AtomicInteger i = new AtomicInteger(0);
-        for (int j = 0; j < 10; j++) {
-            i.incrementAndGet();
-        }
-        System.out.println(i);
-    }
-
-    private static void testLock() {
-        ReentrantLock lock = new ReentrantLock();
-        lock.lock();
-    }
-
-    private static void test01() {
-        String jsonStr = "{\"name\":\"张三\",\"gender\":\"男\",\"phone\":\"13457946412\"}";
-        Map<String, Object> map = JsonUtils.jsonStrToMap(jsonStr);
-        for (Map.Entry<String, Object> entry : map.entrySet()) {
-            System.out.println(entry.getKey()+"==="+entry.getValue());
-        }
-    }
-
-    private static void test02() {
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("张三", 123456);
-        map.put("李四", 123456);
-        map.put("王五", 123456);
-        map.put("赵六", 123456);
-        map.put("周七", 123456);
-        Map<String, Object> map1 = MapUtils.removeMapElement(map, "周七", 1);
-        for (Map.Entry<String, Object> entry : map1.entrySet()) {
-            System.out.println(entry.getKey()+"==="+entry.getValue());
-        }
     }
 
 }

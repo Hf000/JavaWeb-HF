@@ -1,5 +1,8 @@
 package com.hufei.util;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author:hufei
  * @CreateTime:2020-09-15
@@ -16,4 +19,26 @@ public class TestExample {
         //解密
         System.out.println(DecodeUtils.aesDecode("zpgAESencryptRules", "z5WYz6zfKTwNukExNux3bkjYGwYEtLFAEQxdB+xSxxba5QvNS4PCPKoi2ANYMSXVFInIpQq4WsqXDgaupTMdWw=="));
     }
+
+    private static void test01() {
+        String jsonStr = "{\"name\":\"张三\",\"gender\":\"男\",\"phone\":\"13457946412\"}";
+        Map<String, Object> map = JsonUtils.jsonStrToMap(jsonStr);
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            System.out.println(entry.getKey()+"==="+entry.getValue());
+        }
+    }
+
+    private static void test02() {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("张三", 123456);
+        map.put("李四", 123456);
+        map.put("王五", 123456);
+        map.put("赵六", 123456);
+        map.put("周七", 123456);
+        Map<String, Object> map1 = MapUtils.removeMapElement(map, "周七", 1);
+        for (Map.Entry<String, Object> entry : map1.entrySet()) {
+            System.out.println(entry.getKey()+"==="+entry.getValue());
+        }
+    }
+
 }
