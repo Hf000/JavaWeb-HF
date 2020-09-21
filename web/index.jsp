@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Java Web</title>
   </head>
   <body>
-  $END$
+    web project test
   </body>
 </html>
