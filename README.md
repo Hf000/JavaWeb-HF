@@ -10,5 +10,5 @@ personal project
   2.选择Artifacts-->点击“+”号-->选择Web Application：Archive-->Empty（此时可以修改右边的Name也就是war的名称）；
   3.点击“+”号选择Directory Content选择项目的web根目录，然后点击create directory创建文件夹图标，创建WEB-INF文件夹，在此文件夹下创建classes文件夹；
   4.在classes文件夹上点击“+”号选择Module Output然后选择当前项目点击ok，如果依赖了jar包会出现添加lib中jar包的提示，在提示中点击fix添加依赖jar包文件即可；
-  5.点击idea最顶部菜单栏的Build-->Build Artifact-->选择创建的war执行Build即可，然后找到对应路径下的jar包即可。
+  5.点击idea最顶部菜单栏的Build-->Build Artifact-->选择创建的war执行Build即可，然后找到对应路径下的war包即可。
   6.将war包放置tomcat的webapps目录下，启动tomcat，访问路径为，例如localhost:8080/war包名称。
