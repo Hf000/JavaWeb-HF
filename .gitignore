@@ -1,4 +1,3 @@
-/out/
-/javaweb.iml
-/.idea/
-/web/WEB-INF/classes/
+*.idea
+*.iml
+target/
